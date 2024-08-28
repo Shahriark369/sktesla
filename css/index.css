@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+header {
+    background-color: rgba(31, 31, 31, 0.8);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Logo */
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 150px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    position: relative;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #f39c12;
+    margin-bottom: 20px;
+    animation: photo-fade 3s infinite alternate;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+    animation: text-fade 2s infinite alternate;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin: 0;
+    max-width: 600px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(31, 31, 31, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+/* Keyframes for Animations */
+@keyframes photo-fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes text-fade {
+    0% {
+        color: #ffffff;
+    }
+    100% {
+        color: #f39c12;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+  }
+  
